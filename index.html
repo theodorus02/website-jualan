@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigitalPro – Jasa Website Profesional</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">DigitalPro</div>
+  <ul class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#fitur">Fitur</a></li>
+    <li><a href="#paket">Paket</a></li>
+    <li><a href="#kontak" class="btn">Pesan</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <h1>Website Profesional<br>Untuk Bisnis Anda</h1>
+  <p>Tingkatkan kepercayaan & penjualan dengan website modern</p>
+  <a href="#kontak" class="btn besar">Konsultasi Gratis</a>
+</section>
+
+<!-- FITUR -->
+<section class="fitur" id="fitur">
+  <h2>Kenapa Pilih Kami?</h2>
+  <div class="grid">
+    <div class="box">Desain Profesional</div>
+    <div class="box">Mobile Friendly</div>
+    <div class="box">Cepat & Ringan</div>
+    <div class="box">Siap Publish</div>
+  </div>
+</section>
+
+<!-- PAKET -->
+<section class="paket" id="paket">
+    <h2>Paket Harga</h2>
+    <div class="grid">
+  
+      <div class="card">
+        <h3>UMKM</h3>
+        <p>Landing Page</p>
+        <span>Rp 500.000</span>
+        <button onclick="pesan('UMKM')">Pesan Sekarang</button>
+      </div>
+  
+      <div class="card unggulan">
+        <h3>Bisnis</h3>
+        <p>Website Profesional</p>
+        <span>Rp 1.500.000</span>
+        <button onclick="pesan('Bisnis')">Pesan Sekarang</button>
+      </div>
+  
+      <div class="card">
+        <h3>Premium</h3>
+        <p>Website + Support</p>
+        <span>Rp 3.000.000</span>
+        <button onclick="pesan('Premium')">Pesan Sekarang</button>
+      </div>
+  
+    </div>
+  </section>
+  
+
+<!-- KONTAK -->
+<section class="kontak" id="kontak">
+  <h2>Hubungi Kami</h2>
+  <form onsubmit="kirimWA(); return false;">
+    <input type="text" id="nama" placeholder="Nama Anda" required>
+    <input type="text" id="layanan" placeholder="Paket yang diminati" required>
+    <textarea id="pesan" placeholder="Pesan tambahan"></textarea>
+    <button type="submit">Chat WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 DigitalPro. All Rights Reserved.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

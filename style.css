@@ -1,0 +1,261 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+  }
+  
+  body{
+    background:#f9fafb;
+    color:#1f2937;
+  }
+  
+  nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 10%;
+    background:white;
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+  }
+  
+  .logo{
+    font-size:22px;
+    font-weight:700;
+    color:#4f46e5;
+  }
+  
+  .menu{
+    list-style:none;
+    display:flex;
+    gap:25px;
+  }
+  
+  .menu a{
+    text-decoration:none;
+    color:#1f2937;
+    font-weight:500;
+  }
+  
+  .menu a:hover{
+    color:#6366f1;
+  }
+  
+  .btn{
+    background:#6366f1;
+    color:white !important;
+    padding:10px 22px;
+    border-radius:30px;
+  }
+  
+  .hero{
+    padding:90px 10%;
+    text-align:center;
+    background:linear-gradient(135deg,#6366f1,#4f46e5);
+    color:white;
+  }
+  
+  .hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+  }
+  
+  .hero p{
+    margin-bottom:25px;
+  }
+  
+  .besar{
+    font-size:18px;
+  }
+  
+  section{
+    padding:70px 10%;
+    text-align:center;
+  }
+  
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:30px;
+  }
+  
+  .box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+  }
+  
+  .card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+  }
+  
+  .card span{
+    display:block;
+    margin-top:15px;
+    font-size:22px;
+    color:#4f46e5;
+  }
+  
+  .unggulan{
+    border:3px solid #6366f1;
+  }
+  
+  .kontak{
+    background:#eef2ff;
+  }
+  
+  form{
+    max-width:420px;
+    margin:30px auto;
+  }
+  
+  input, textarea, button{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:10px;
+    border:1px solid #ddd;
+  }
+  
+  button{
+    background:#4f46e5;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+  }
+  
+  footer{
+    background:#1f2937;
+    color:white;
+    padding:20px;
+    text-align:center;
+  }
+  .card button{
+    margin-top:15px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:20px;
+    background:#4f46e5;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+  }
+  
+  .card button:hover{
+    background:#6366f1;
+  }
+/* ANIMASI MUNCUL */
+@keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* PAKET CARD */
+  .card{
+    animation: fadeUp 0.8s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover{
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+  }
+  .unggulan{
+    border:3px solid #6366f1;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse{
+    0%{
+      box-shadow:0 0 0 0 rgba(99,102,241,0.6);
+    }
+    70%{
+      box-shadow:0 0 0 15px rgba(99,102,241,0);
+    }
+    100%{
+      box-shadow:0 0 0 0 rgba(99,102,241,0);
+    }
+  }
+  .card:nth-child(1){ animation-delay: 0.2s; }
+  .card:nth-child(2){ animation-delay: 0.4s; }
+  .card:nth-child(3){ animation-delay: 0.6s; }
+  .card{
+    animation: pulse 3s infinite;
+  }
+/* SCROLL ANIMATION */
+.scroll-anim{
+    opacity:0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+  
+  .scroll-anim.show{
+    opacity:1;
+    transform: translateY(0);
+  }
+/* =====================
+   MOBILE ANIMATION
+   ===================== */
+   @media (max-width: 768px){
+
+    .card{
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    /* Efek saat disentuh */
+    .card:active{
+      transform: scale(0.97);
+      box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    }
+  
+    /* Hover dinonaktifkan */
+    .card:hover{
+      transform:none;
+      box-shadow:none;
+    }
+  
+  }
+  @media (max-width: 768px){
+
+    .scroll-anim{
+      transform: translateY(20px);
+    }
+  
+  }
+  @media (max-width: 768px){
+
+    .badge{
+      font-size:11px;
+      padding:5px 12px;
+      animation: none;
+    }
+  
+    .unggulan{
+      animation:none;
+      border:2px solid #6366f1;
+    }
+  
+  }
+  @media (max-width: 768px){
+
+    button:active{
+      transform: scale(0.96);
+    }
+  
+  }
+                        
